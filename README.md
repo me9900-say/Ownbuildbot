@@ -1,1 +1,1 @@
-# AZmini
+# own bot
