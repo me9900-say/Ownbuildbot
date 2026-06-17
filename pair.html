@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>𓆩𝐙𝐀𝐈𝐃𝐈-𝐌𝐃𓆪 - PAIR CODE</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* =========================================
+   PREMIUM CYBER DETAILED DARK THEME 
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: radial-gradient(circle at 50% 50%, #121225 0%, #080811 100%);
+    color: #fff;
+    padding: 20px;
+}
+
+/* Master Glassmorphism Glow Card */
+.card {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(19, 19, 36, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 28px;
+    padding: 35px 25px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 
+                0 0 30px rgba(139, 92, 246, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Accent Lighting Effects Inside Card */
+.card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.08) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+/* RGB Dynamic Moving Gradients */
+.rgb-text {
+    background: linear-gradient(90deg, #a78bfa, #f472b6, #60a5fa, #f472b6, #a78bfa);
+    background-size: 400%;
+    animation: rgbSwipe 10s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+
+.sub-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+
+.status-instruction {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #94a3b8;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Flow Containers with Premium Fluid Animations */
+.rgb-container {
+    padding: 2px;
+    position: relative;
+    border-radius: 16px;
+    background: linear-gradient(90deg, #8b5cf6, #ec4899, #3b82f6, #ec4899, #8b5cf6);
+    background-size: 300% 100%;
+    width: 100%;
+    margin: 0 auto 18px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.move-right {
+    animation: scrollRight 4s linear infinite;
+}
+
+.move-left {
+    animation: scrollLeft 4s linear infinite;
+}
+
+.rgb-container:focus-within {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.25);
+}
+
+/* Pure Inner Components Matching Originals */
+.inner-box {
+    background: #0b0b14 !important;
+    color: #fff !important;
+    border-radius: 14px;
+    width: 100%;
+    padding: 16px;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-size: 1.05rem;
+    font-weight: 600;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    transition: background 0.2s ease;
+}
+
+input.inner-box {
+    letter-spacing: 1px;
+}
+
+input.inner-box::placeholder {
+    color: #4b5563;
+    letter-spacing: 0px;
+}
+
+button.inner-box {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+button.inner-box:hover {
+    background: #111122 !important;
+}
+
+button.inner-box:active {
+    transform: scale(0.99);
+}
+
+/* Code Response Area Output Layout */
+#codeBox {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 6px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+/* Footer & Decorative Details */
+.info-footer {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.footer-text {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+.version-tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    background: rgba(139, 92, 246, 0.1);
+    color: #a78bfa;
+    padding: 4px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-top: 5px;
+    letter-spacing: 1px;
+    border: 1px solid rgba(139, 92, 246, 0.15);
+}
+
+/* Keyframe Animations */
+@keyframes rgbSwipe {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 400% 50%; }
+}
+
+@keyframes scrollRight {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 300% 0%; }
+}
+
+@keyframes scrollLeft {
+    0% { background-position: 0% 0%; }
+    100% { background-position: -300% 0%; }
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+
+    <h1 class="rgb-text">𓆩𝐙𝐀𝐈𝐃𝐈-𝐌𝐃𓆪</h1>
+    <div class="sub-title rgb-text">Pair Code System</div>
+
+    <p class="status-instruction">
+        <i class="fa-solid fa-phone-volume text-purple-400"></i>
+        <span>Type Your WhatsApp Number</span>
+    </p>
+
+    <div class="rgb-container move-right">
+        <input type="text" id="number" class="inner-box" placeholder="923237045919">
+    </div>
+
+    <div class="rgb-container move-left">     
+        <button class="inner-box" onclick="getCode()">
+            <span>Get Pair Code</span>
+            <i class="fa-solid fa-key-skeleton text-sm opacity-80"></i>
+        </button> 
+    </div> 
+
+    <div class="rgb-container move-right" id="borderBox" style="display:none;">
+        <div class="inner-box" id="codeBox">----</div>
+    </div>
+
+    <div class="info-footer">
+        <p class="footer-text"><i class="fa-solid fa-robot text-purple-400/60 mr-1"></i> Official WhatsApp Bot</p>
+        <p class="footer-text">Made By ZAIDI-TEXK</p>
+        <span class="version-tag">ZAIDI-MD MINI BOT EDITION 2026</span>
+    </div>
+   
+</div>
+
+
+<script>
+/* =========================================================================
+   CORE FUNCTIONAL BACKEND SYNC LOGIC (EXACTLY UNCHANGED & WORKING)
+   ========================================================================= */
+async function getCode() {
+    const num = document.getElementById("number").value.replace(/[^0-9]/g, '');
+    const codeBox = document.getElementById("codeBox");
+    const borderBox = document.getElementById("borderBox");
+
+    // Agar number khali hai
+    if (!num) {
+        borderBox.style.display = "block"; // Box show karo
+        codeBox.style.letterSpacing = "normal"; // Error ke liye spacing normal
+        codeBox.style.color = "#ff4d4d"; // Error color Red
+        codeBox.innerText = "APNA WHATSAPP NUMBER LIKHE";
+        return;
+    }
+
+    // Loading State
+    borderBox.style.display = "block";
+    codeBox.style.letterSpacing = "normal";
+    codeBox.style.color = "#fff"; 
+    codeBox.innerText = "CONNECTING.....";
+
+    try {
+        const res = await fetch(`/code?number=${num}`);
+        const data = await res.json();
+        
+        if (data.code) {
+            codeBox.style.letterSpacing = "4px"; // Code ke liye spacing wapis
+            codeBox.style.color = "#fff"; 
+            codeBox.innerText = data.code;
+        } else {
+            codeBox.style.color = "#ff4d4d";
+            codeBox.innerText = "SERVER FULL";
+        }
+    } catch (e) {
+        codeBox.style.color = "#ff4d4d";
+        codeBox.innerText = "SERVER IS FULL";
+    }
+}
+
+function copyCode(code) {
+    navigator.clipboard.writeText(code);
+    const display = document.querySelector('.code-display');
+    const originalText = display.innerText;
+
+    display.innerText = "COPIED";
+    display.style.borderColor = "var(--success)";
+    display.style.color = "var(--success)";
+
+    setTimeout(() => {
+        display.innerText = originalText;
+        display.style.borderColor = "var(--soft)";
+        display.style.color = "var(--soft)";
+    }, 1500);
+}
+
+// Optional: Simple placeholder sound function
+function playSound(type) {
+    // You can add real sounds here later if you want
+}
+</script>
+
+</body>
+</html>
